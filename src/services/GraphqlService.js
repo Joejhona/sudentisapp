@@ -9,7 +9,7 @@ const apitoken = axios.create({
     //baseURL: "http://127.0.0.1:8000/gql",
     //baseURL: "http://joejhona.pythonanywhere.com/gql",
     baseURL: "https://joejhona.pythonanywhere.com/gql",
-    timeout: 1000,
+    //timeout: 5000,
 })
 
 function getUsers () {
