@@ -1,195 +1,160 @@
-# CoreUI Vue - Free Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%20Vue%20Admin%20Template%20&url=http://coreui.io/vue/&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
+# Frontend Vuejs Bootstrap
 
-### Check out our Vue Admin Templates and support CoreUI Development
+* La Aplicacion esta funcionando en el siguinete [link](https://sudentis3.herokuapp.com)
 
-[![Bootstrap Admin Templates Bundle](https://genesisui.com/img/bundle2.png)](https://genesisui.com/bundle.html?support=1)
+* Ingresa tu usuario y contraseña
 
-[Check out Bootstrap Admin Templates Bundle](https://genesisui.com/bundle.html?support=1)
-
-This is Vue.js version of our Bootstrap 4 admin template [CoreUI](https://github.com/coreui/coreui-free-bootstrap-admin-template).
-
-Please help us on [Product Hunt](https://www.producthunt.com/posts/coreui-open-source-bootstrap-4-admin-template-with-angular-2-react-js-vue-js-support) & [Designer News](https://www.designernews.co/stories/81127). Thanks in advance!
-
-Why I decided to create CoreUI? Please read this article: [Jack of all trades, master of none. Why Boostrap Admin Templates suck.](https://medium.com/@lukaszholeczek/jack-of-all-trades-master-of-none-5ea53ef8a1f#.7eqx1bcd8)
-
-CoreUI is an Open Source Vue & Bootstrap Admin Template. But CoreUI is not just another Admin Template. It goes way beyond hitherto admin templates thanks to transparent code and file structure. And if that's not enough, let’s just add that CoreUI consists bunch of unique features and over 1000 high quality icons.
-
-CoreUI is based on Bootstrap 4 and offers 6 versions: [HTML5 AJAX](https://github.com/coreui/coreui-free-bootstrap-admin-template-ajax), [HTML5 Static](https://github.com/coreui/coreui-free-bootstrap-admin-template), [AngularJS](https://github.com/mrholek/CoreUI-AngularJS), [Angular 2+](https://github.com/coreui/coreui-free-angular-admin-template), [React.js](https://github.com/coreui/coreui-free-react-admin-template) & [Vue.js](https://github.com/coreui/coreui-free-vue-admin-template).
-
-CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
-
-[![CoreUI Vue Free Bootstrap Admin Template](http://coreui.io/assets/img/coreui.png "CoreUI Vue Free Bootstrap Admin Template")](http://coreui.io)
-
-**NOTE:** Please remember to **STAR** this project and **FOLLOW** [my Github](https://github.com/coreui) to keep you update with this template.
-
-## Demo
-
-A fully functional demo is available at [CoreUI](http://coreui.io/)
-
-## Table of Contents
-
-* [Versions](#versions)
-* [CoreUI Pro](#coreui-pro)
-* [Admin Templates built on top of CoreUI Pro](#admin-templates-built-on-top-of-coreui-pro)
-* [Installation](#installation)
-* [Usage](#usage)
-* [What's included](#whats-included)
-* [Documentation](#documentation)
-* [Contributing](#contributing)
-* [Versioning](#versioning)
-* [Creators](#creators)
-* [Community](#community)
-* [Community Projects](#community-projects)
-* [License](#license)
-* [Support CoreUI Development](#support-coreui-development)
-
-## Versions
-
-CoreUI is built on top of Bootstrap 4 and supports popular frameworks.
-
-* [CoreUI Free Bootstrap Admin Template](https://github.com/coreui/coreui-free-bootstrap-admin-template)
-* [CoreUI Free Bootstrap Admin Template (Ajax)](https://github.com/coreui/coreui-free-bootstrap-admin-template-ajax)
-* [CoreUI Free Angular 2+ Admin Template](https://github.com/coreui/coreui-free-angular-admin-template)
-* 🚧 [CoreUI Free .NET Core 2 Admin Template](https://github.com/mrholek/CoreUI-NET) (Available Soon)
-* [CoreUI Free React.js Admin Template](https://github.com/coreui/coreui-free-react-admin-template)
-* 🚧 [CoreUI Free Vue.js Admin Template](https://github.com/coreui/coreui-free-vue-admin-template)
-
-## CoreUI Pro
-
-* 💪  [CoreUI Pro Bootstrap Admin Template](https://coreui.io/pro/)
-* 💪  [CoreUI Pro Bootstrap Admin Template (Ajax)](https://coreui.io/pro/)
-* 💪  [CoreUI Pro Angular Admin Template](https://coreui.io/pro/angular)
-* 💪  [CoreUI Pro React Admin Template](https://coreui.io/pro/react)
-* 💪  [CoreUI Pro Vue Admin Template](https://coreui.io/pro/vue)
-
-## Admin Templates built on top of CoreUI Pro
-
-| CoreUI Pro | Prime | Root | Alba | Leaf |
-| --- | --- | --- | --- | --- |
-| [![CoreUI Pro Admin Template](https://coreui.io/assets/img/example-coureui.jpg)](https://coreui.io/pro/) | [![Prime Admin Template](https://genesisui.com/assets/img/templates/prime1280.jpg)](https://genesisui.com/admin-templates/bootstrap/prime/?support=1) | [![Root Admin Template](https://genesisui.com/assets/img/templates/root1280.jpg)](https://genesisui.com/admin-templates/bootstrap/root/?support=1) | [![Alba Admin Template](https://genesisui.com/assets/img/templates/alba1280.jpg)](https://genesisui.com/admin-templates/bootstrap/alba/?support=1) | [![Leaf Admin Template](https://genesisui.com/assets/img/templates/leaf1280.jpg)](https://genesisui.com/admin-templates/bootstrap/leaf/?support=1)
-
-## Installation
-
-### Clone repo
-
-``` bash
-# clone the repo
-$ git clone https://github.com/coreui/coreui-free-vue-admin-template.git CoreUI-Vue
-
-# go into app's directory
-$ cd CoreUI-Vue
-
-# install app's dependencies
-$ npm install
-```
-
-## Usage
-
-``` bash
-# serve with hot reload at localhost:8080
-npm run serve
-
-# build for production with minification
-npm run build
-
-# run linter
-npm run lint
-
-# run unit tests
-npm run test:unit
-
-# run e2e tests
-npm run test:e2e
+* El repositorio tiene dos remote: 
 
 ```
-
-For a detailed explanation on how things work, check out the [Vue CLI Guide](https://cli.vuejs.org/guide/).
-
-## What's included
-
-Within the download you'll find the following directories and files:
-
-```
-CoreUI-Vue/
-├── public/              # pure static assets (directly copied)
-│   └── index.html           # index.html template
-├── src/                 # project root
-│   ├── assets/                 # module assets (processed by webpack)
-│   │   └── scss/               # user styles
-│   ├── components/             # ui components
-│   ├── containers/             # ui containers
-│   ├── router/                 # routing 
-│   ├── shared/                 # utils
-│   ├── views/                  # ui views
-│   ├── _nav.js                 # sidebar nav config
-│   ├── App.vue                 # main app component
-│   └── main.js                 # app entry file
-├── test/
-│   └── unit/            # unit tests
-│   └── e2e/             # e2e tests
-├── .eslintrc.js         # eslint config
-├── .gitignore           # defaults for gitignore
-├── .postcssrc.js        # postcss config
-├── CHANGELOG.md
-├── README.md
-├── babel.config.js      # babel config
-├── jest.config.js       # jest config
-├── vue.config.js        # vue-cli config
-├── LICENSE
-└── package.json         # build scripts and dependencies
+$ git remote
+gitlab-origin
+heroku
+## Para hacer el push
+git push heroku master
+git push gitlab-origin master
+## falta probar el push de todo
+git push -u master --all ## creo que es asi revisar la documentacion
 ```
 
-## Bugs and feature requests
+* El Frontend se conecta al [backend](https://joejhona.pythonanywhere.com/admin) con la expencion /gql, demora un poco en responder pero esta funcionando bien.
 
-Have a bug or a feature request? [Please open a new issue](https://github.com/coreui/coreui-free-vue-admin-template/issues).
+**Nota** Revisar el README del Backend para ver el servidor
 
-## Documentation
+## Implementacion de vuejs en Heroku
 
-CoreUI's documentation, is hosted on our website [CoreUI](http://coreui.io/)
+Se siguio este [link](https://medium.com/netscape/deploying-a-vue-js-2-x-app-to-heroku-in-5-steps-tutorial-a69845ace489)
 
-## Contributing
+### 1. Asegurate de que tu app funciona
 
-Please read through our [contributing guidelines](https://github.com/coreui/coreui-free-bootstrap-admin-template/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Sigue las instrucciones de instalacion de npm, mejor trabajar con VUECLI 3 y Vuetify parece que tiene mas opciones
+La interfaz de Bootstrap es mas bonita pero limitada
 
-Editor preferences are available in the [editor config](https://github.com/coreui/coreui-free-vue-admin-template/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
+```
+~/myapp$ npm install
+~/myapp$ npm run server
+```
 
-## Versioning
+### 2. Creando tu proyecto 
 
-For transparency into our release cycle and in striving to maintain backward compatibility,CoreUI Free Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+Crear el proyecto heroku, pero antes debes:
 
-See [the Releases section of our project](https://github.com/coreui/coreui-free-vue-admin-template/releases) for changelogs for each release version.
+* Instalar Heroku CLI
+* Inisiar sesion
 
-## Creators
+```
+## dentro de la carpeta de la aplicacion, pero creo que se puede hacer en cualquier lado
+~/myapp$ heroku create NOMBRE_DE_LA_APP
+## para verificar entra a la https://NOMBRE_DE_LA_APP.herokuapp.com
+## se vera un avios de que se creo la aplicacion
 
-**Łukasz Holeczek**
+## Configura la aplicacion para mode de produccion
+heroku config:set NODE_ENV=production --app NOMBRE_DE_LA_APP
 
-* <https://twitter.com/lukaszholeczek>
-* <https://github.com/mrholek>
+## Configura el package.json para que heroku lo pueda leer
+~/myapp$ ve package.json
+```
 
-**Andrzej Kopański**
+Agrega la linea de comando que se indica a continuacion:
 
-* <https://github.com/xidedix>
+```
+{
+  "name": "<YOUR-PROJECT-NAME-HERE>",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "start": "node server.js",   <--- AGREGA ESTA LINEA DE COMANDO 
+```
+**Nota** Esto se debe hacer antes de compilar la aplicacion, en el link no indica cuando pero yo asumo que es antes
 
-## Community
+### 3. Crea un pequeño servidor express
 
-Get updates on CoreUI's development and chat with the project maintainers and community members.
+```
+~/myapp$ npm install express --save
+```
 
-- Follow [@core_ui on Twitter](https://twitter.com/core_ui).
-- Read and subscribe to [CoreUI Blog](https://coreui.ui/blog/).
+Ahora crea un archivo server.js en la raiz de la aplicacion
 
-### Community Projects
+```
+~/myapp$ vi server.js
+```
 
-Some of projects created by community but not maintained by CoreUI team.
+Pega el siguiente codigo, esto crea un pequeño servidor solo eso
 
-* [NuxtJS + Vue CoreUI](https://github.com/muhibbudins/nuxt-coreui)
-* [Colmena](https://github.com/colmena/colmena)
+```
+var express = require('express');
+var path = require('path');
+var serveStatic = require('serve-static');
+app = express();
+app.use(serveStatic(__dirname + "/dist"));
+var port = process.env.PORT || 5000;
+app.listen(port);
+console.log('server started '+ port);
+```
 
-## Copyright and license
+Compila la aplicacion
 
-copyright 2017 creativeLabs Łukasz Holeczek. Code released under [the MIT license](https://github.com/coreui/coreui-free-vue-admin-template/blob/master/LICENSE).
-There is only one limitation you cannot re-distribute the `CoreUI` as stock nor if you modify the `CoreUI`. In the past we faced some problems with persons who tried to sell `CoreUI` based templates.
+```
+~/myapp$ npm run build
+## se creara una carpeta dist, la cual si te das cuenta esta en 
+## en la configuracion express para leer esta carpeta
+## falta averiguar como es en VUECLI 3, creo que es diferente
+```
 
-## Support CoreUI Development
-CoreUI is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support development by donating on [PayPal](https://www.paypal.me/holeczek), buying [CoreUI Pro Version](https://coreui.io/pro) or buying one of our [premium admin templates](https://genesisui.com/?support=1).
+Verificar que la compilacion esta bien y que el servidor express funciona tambien
 
-As of now I am exploring the possibility of working on CoreUI fulltime - if you are a business that is building core products using CoreUI, I am also open to conversations regarding custom sponsorship / consulting arrangements. Get in touch on [Twitter](https://twitter.com/lukaszholeczek).
+```
+~/myapp$ node server.js
+## Deberia estar arrancando y funcionando
+```
+dirijirse a [localhost:5000](http://localhost:5000) para verificar
+
+### 4. Inicia el GIT y el Repositorio Heroku
+
+```
+~/myapp$ git init
+~/myapp$ heroku git:remote --app NOMBRE_DE_LA_APP
+```
+
+Modifica el .gitignore, enrealidad noce porque lo hace pero ahi que hacerlo tambien
+hasta aprender bien
+
+```
+~/myapp$ vi .gitignore
+## elimina la linea que dice dist/
+## esto permitira que se guarde la carpeta dist/
+## seguro para tener un respaldo
+```
+
+Ahora guarda los cambios y has el commit
+
+```
+git add -A
+git commit -m "Adding files."
+```
+
+Finalmente haz el push a Heroku, para que este haga toda la magia
+
+```
+git push heroku master
+## y listo tardara un poco pero ya deberia estar funcionando la aplicacion
+```
+
+### 5. Agrega otro remote
+
+Para trabajar con github o gitlab, crear otro remote para clonar y subir tambien (en desarrollo)
+
+```
+git remote add gitlab-origin git@gitlab.com:XXXXXX
+git push -u gitlab-origin master
+## y se subira al gitlab
+## falta ver como hacer el pull desde gitlab, pero no debe ser dificil
+```
+
+## Creado por
+
+joejhona@gmail.com
