@@ -1,5 +1,36 @@
 import gql from 'graphql-tag'
 
+export const GET_TOKEN = gql`
+  mutation TokenAuth($username: String!, $password: String!) {
+    tokenAuth(username: $username, password: $password) {
+      token
+    }
+  }
+`;
+
+export const GET_ME = gql`
+  query {
+    me {
+      id
+      nombre
+      region
+      estado
+      href
+      urlimg
+      zonework
+      credit
+      dentistcreate
+      dentistuser{
+        id
+        username
+        email
+      }
+    }
+  }
+`;
+
+
+/*
 export const GET_USER = gql`
   query Username($username: String!){
     user(username:$username) {
@@ -28,21 +59,4 @@ export const GET_USERS = gql`
     }
   }
 `;
-
-export const GET_TOKEN = gql`
-  mutation TokenAuth($username: String!, $password: String!) {
-    tokenAuth(username: $username, password: $password) {
-      token
-    }
-  }
-`;
-
-export const GET_ME = gql`
-  query {
-    me {
-      id
-      username
-      email
-    }
-  }
-`;
+*/

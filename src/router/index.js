@@ -7,9 +7,11 @@ const IndexJoe = () => import('@/views/IndexJoe')
 
 // Containers
 const DefaultContainer = () => import('@/containers/DefaultContainer')
+const SudentisContainer = () => import('@/containers/SudentisContainer')
 
 // Views
 const Dashboard = () => import('@/views/Dashboard')
+const Control = () => import('@/views/Control')
 
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
@@ -70,8 +72,24 @@ let router = new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
+      path: '/sudentis3',
+      redirect: '/sudentis3/control',
+      name: 'Home',
+      component: SudentisContainer,
+      children:[
+        {
+          path: 'control',
+          name: 'Control',
+          component: Control,
+          meta: { 
+            requiresAuth: true
+          },
+        }
+      ]
+    },
+    {
       path: '/',
-      redirect: '/indexjoe',
+      redirect: '/dashboard',
       name: 'Home',
       component: DefaultContainer,
       children: [
@@ -85,9 +103,9 @@ let router = new Router({
           name: 'Control',
           component: Dashboard,
           //beforeEnter: ifAuthenticated,
-          meta: { 
-            requiresAuth: true
-          }
+          //meta: { 
+          //  requiresAuth: true
+          //}
         },
         {
           path: 'theme',

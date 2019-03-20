@@ -43,8 +43,7 @@
       <main class="main">
         <Breadcrumb :list="list"/>
         <div class="container-fluid">
-          <!--<router-view></router-view>-->
-          <h1>Este es una prueba</h1>
+          <router-view></router-view>
         </div>
       </main>
       <AppAside fixed>
@@ -74,7 +73,7 @@ import DefaultHeaderDropdownAccnt from './DefaultHeaderDropdownAccnt'
 import { mapGetters, mapState } from 'vuex'
 
 export default {
-  name: 'DefaultContainer',
+  name: 'SudentisContainer',
   components: {
     AsideToggler,
     AppHeader,
@@ -106,7 +105,7 @@ export default {
     },
     ...mapGetters(['isAuthenticated']),
     ...mapState({
-        name: state => `${state.user.profile}`,
+        name: state => `${state.user.profile.username}`,
       })
   },
 }

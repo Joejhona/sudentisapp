@@ -11,7 +11,7 @@ const apitoken = axios.create({
     baseURL: "https://joejhona.pythonanywhere.com/gql",
     //timeout: 5000,
 })
-
+/*
 function getUsers () {
     return apitoken.post('',{
         query: print(GET_USERS)
@@ -32,7 +32,7 @@ function getUser (params) {
         }
     })
 }
-
+*/
 function getTokenUP (params) {
     return apitoken.post('',{
         query: print(GET_TOKEN),

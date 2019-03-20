@@ -34,7 +34,7 @@
 
 <script>
 import { Callout } from '@coreui/vue'
-import {getClinics, getUsers, getUser, getTokenUP, getCookie} from '@/services/GraphqlService'
+import { getClinics, getUsers, getUser, getTokenUP, getCookie } from '@/services/GraphqlService'
 import { mapGetters, mapState } from 'vuex'
 
 
@@ -66,7 +66,7 @@ export default {
     computed:{
         ...mapGetters(['isAuthenticated']),
         ...mapState({
-            authLoading: state => state.auth.status === 'loading',
+            name: state => `${state.user.profile.nombre}`,
         })
     }
 }

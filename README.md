@@ -155,6 +155,11 @@ git push -u gitlab-origin master
 ## falta ver como hacer el pull desde gitlab y luego el push a heroku, pero no debe ser dificil
 ```
 
+### 6. Cambios
+
+Se saco del package.json en script:
+"build": "vue-cli-service build",
+
 ## Creado por
 
 joejhona@gmail.com
