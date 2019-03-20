@@ -152,7 +152,7 @@ Para trabajar con github o gitlab, crear otro remote para clonar y subir tambien
 git remote add gitlab-origin git@gitlab.com:XXXXXX
 git push -u gitlab-origin master
 ## y se subira al gitlab
-## falta ver como hacer el pull desde gitlab, pero no debe ser dificil
+## falta ver como hacer el pull desde gitlab y luego el push a heroku, pero no debe ser dificil
 ```
 
 ## Creado por
