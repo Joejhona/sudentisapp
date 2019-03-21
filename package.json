@@ -11,7 +11,9 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "vue-cli-service build"
+
   },
   "dependencies": {
     "@coreui/coreui": "^2.1.6",

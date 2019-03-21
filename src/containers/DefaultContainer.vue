@@ -43,8 +43,8 @@
       <main class="main">
         <Breadcrumb :list="list"/>
         <div class="container-fluid">
-          <!--<router-view></router-view>-->
-          <h1>Este es una prueba</h1>
+          <router-view></router-view>
+          <!--<h1>Este es una prueba</h1>-->
         </div>
       </main>
       <AppAside fixed>
@@ -104,10 +104,6 @@ export default {
     list () {
       return this.$route.matched.filter((route) => route.name || route.meta.label )
     },
-    ...mapGetters(['isAuthenticated']),
-    ...mapState({
-        name: state => `${state.user.profile}`,
-      })
   },
 }
 </script>

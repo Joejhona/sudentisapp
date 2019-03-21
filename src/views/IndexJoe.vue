@@ -34,7 +34,7 @@
 
 <script>
 import { Callout } from '@coreui/vue'
-import { getClinics, getUsers, getUser, getTokenUP, getCookie } from '@/services/GraphqlService'
+import { getUsers, getTokenUP } from '@/services/GraphqlService'
 import { mapGetters, mapState } from 'vuex'
 
 

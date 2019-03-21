@@ -1,12 +1,12 @@
 /* eslint-disable promise/param-names */
 import { AUTH_REQUEST, AUTH_ERROR, AUTH_SUCCESS, AUTH_LOGOUT } from '../actions/auth'
 import { USER_REQUEST } from '../actions/user'
-//import apiCall from 'utils/api'
 import {getTokenUP} from '@/services/GraphqlService'
 import {apitoken} from '@/services/api'
 //import Router from '@/router'
 
 const state = { token: localStorage.getItem('user-token') || '', status: '', hasLoadedOnce: false }
+//const state = { token: '', status: '', hasLoadedOnce: false }
 
 const getters = {
   isAuthenticated: state => !!state.token,
@@ -17,22 +17,12 @@ const actions = {
   [AUTH_REQUEST]: ({commit, dispatch}, user) => {
     return new Promise((resolve, reject) => {
       commit(AUTH_REQUEST)
-      //////////////////////
-      //apiCall({url: 'auth', data: user, method: 'POST'})
-      //console.log(user.username)
       getTokenUP({username:user.username,password:user.password})
       .then(resp => {
-        //console.log(resp.data.data.tokenAuth.token)
-        //localStorage.setItem('user-token', resp.token)
         let token = resp.data.data.tokenAuth.token
-        //let name = user.username
         console.log(token)
         //var tokenA = resp.data.data.tokenAuth.token
-        //console.log(tokenA)
         localStorage.setItem('user-token', token)      
-        // Here set the header of your ajax library to the token value.
-        // example with axios
-        // axios.defaults.headers.common['Authorization'] = resp.token
         apitoken.defaults.headers.common['Authorization'] = `JWT ${token}`
         commit(AUTH_SUCCESS, token)
         dispatch(USER_REQUEST)

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { print } from 'graphql'
-import { GET_USERS,GET_CLINICS,GET_USER,GET_TOKEN,GET_ME } from '@/services/queries'
+import { GET_USERS,GET_CLINICS,CREATE_CLINIC,GET_TOKEN,GET_ME } from '@/services/queries'
 //import { apitoken, instance } from '../services/api'
 //import jQuery from 'jquery'
 //instance.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -50,7 +50,18 @@ function getMe () {
     })
 }
 
-export {getUsers,getClinics,getUser,getTokenUP,getMe}
+function createClinic (params) {
+    return apitoken.post('',{
+        query: print(CREATE_CLINIC),
+        variables: {
+            idruc    : params.idruc,
+            name     : params.name,
+            zonework : params.zonework,
+        }
+    })
+}
+
+export {createClinic,getTokenUP,getMe}
 
 /*
 export default {

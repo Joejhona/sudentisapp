@@ -15,8 +15,7 @@
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <!--<b-navbar-brand>Clinica los Matazanos</b-navbar-brand>      -->
-        <b-nav-item class="px-3" >{{clinica}}</b-nav-item>
-        <b-nav-item class="px-3" >{{name}}</b-nav-item> 
+        <b-nav-item class="px-3" >{{me.nombre}}</b-nav-item> 
         <b-nav-item class="d-md-down-none">
           <i class="icon-bell"></i>
           <b-badge pill variant="danger">5</b-badge>
@@ -27,7 +26,7 @@
         <b-nav-item class="d-md-down-none">
           <i class="icon-location-pin"></i>
         </b-nav-item>
-        <DefaultHeaderDropdownAccnt/>
+        <SudentisHeaderDropdownAccnt/>
       </b-navbar-nav>
       <AsideToggler class="d-none d-lg-block" />
       <AsideToggler class="d-lg-none" mobile />
@@ -48,28 +47,28 @@
       </main>
       <AppAside fixed>
         <!--aside-->
-        <DefaultAside/>
+        <SudentisAside/>
       </AppAside>
     </div>
     <TheFooter>
       <!--footer-->
       <div>
-        <a href="https://coreui.io">CoreUI</a>
-        <span class="ml-1">&copy; 2018 creativeLabs.</span>
+        <span class="ml-1">IDEM &copy; 2019 </span>
       </div>
       <div class="ml-auto">
-        <span class="mr-1">Powered by</span>
-        <a href="https://coreui.io">CoreUI for Vue</a>
+        <span class="mr-1">Desarrollado por</span>
+        <a href="https://github.com/Joejhona">Joejhona</a>
       </div>
     </TheFooter>
   </div>
 </template>
 
 <script>
-import nav from '@/_nav'
+//import nav from '@/_nav'
+import nav from '@/_navsudentis'
 import { Header as AppHeader, SidebarToggler, Sidebar as AppSidebar, SidebarFooter, SidebarForm, SidebarHeader, SidebarMinimizer, SidebarNav, Aside as AppAside, AsideToggler, Footer as TheFooter, Breadcrumb } from '@coreui/vue'
-import DefaultAside from './DefaultAside'
-import DefaultHeaderDropdownAccnt from './DefaultHeaderDropdownAccnt'
+import SudentisAside from './SudentisAside'
+import SudentisHeaderDropdownAccnt from './SudentisHeaderDropdownAccnt'
 import { mapGetters, mapState } from 'vuex'
 
 export default {
@@ -81,8 +80,8 @@ export default {
     AppAside,
     TheFooter,
     Breadcrumb,
-    DefaultAside,
-    DefaultHeaderDropdownAccnt,
+    SudentisAside,
+    SudentisHeaderDropdownAccnt,
     SidebarForm,
     SidebarFooter,
     SidebarToggler,
@@ -93,7 +92,6 @@ export default {
   data () {
     return {
       nav: nav.items,
-      clinica: ''
     }
   },
   computed: {
@@ -105,7 +103,8 @@ export default {
     },
     ...mapGetters(['isAuthenticated']),
     ...mapState({
-        name: state => `${state.user.profile.username}`,
+        //name: state => `${state.user.profile.nombre}`,
+        me: state => state.user.profile,
       })
   },
 }

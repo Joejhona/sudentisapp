@@ -1,25 +1,7 @@
 export default {
   items: [
     {
-      title: true,
-      name: 'Sudentis 3.0',
-      class: '',
-      wrapper: {
-        element: '',
-        attributes: {}
-      }
-    },
-    {
-      name: 'IndexJoe',
-      url: '/indexjoe',
-      icon: 'icon-speedometer',
-      badge: {
-        variant: 'primary',
-        text: 'Joe'
-      }
-    },
-    {
-      name: 'Control',
+      name: 'Dashboard',
       url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {

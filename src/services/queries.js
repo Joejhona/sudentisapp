@@ -29,6 +29,16 @@ export const GET_ME = gql`
   }
 `;
 
+export const CREATE_CLINIC = gql`
+  mutation CreateClinic($idruc: Int!, $name: String!, $zonework: String!){
+    createClinic(idruc: $idruc, name: $name, zonework: $zonework) {
+      idruc
+      name
+      zonework
+      job
+    }
+  }
+`;
 
 /*
 export const GET_USER = gql`

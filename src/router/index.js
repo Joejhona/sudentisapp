@@ -2,20 +2,26 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '@/store'
 
+// Containers
+const SudentisContainer = () => import('@/containers/SudentisContainer')
+
+// Vistas
+const Control = () => import('@/views/Control')
+
+// Vistas - Consultorio
+const CrearConsultorio = () => import('@/views/consultorio/Crear')
+const MisConsultorios = () => import('@/views/consultorio/MisConsultorios')
+
 // IndexJoe
 const IndexJoe = () => import('@/views/IndexJoe')
 
 // Containers
 const DefaultContainer = () => import('@/containers/DefaultContainer')
-const SudentisContainer = () => import('@/containers/SudentisContainer')
 
 // Views
 const Dashboard = () => import('@/views/Dashboard')
-const Control = () => import('@/views/Control')
-
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
-
 const Charts = () => import('@/views/Charts')
 const Widgets = () => import('@/views/Widgets')
 
@@ -84,6 +90,29 @@ let router = new Router({
           meta: { 
             requiresAuth: true
           },
+        },
+        {
+          path: 'consultorio',
+          redirect: '/sudentis3/consultorio/crear',
+          name: 'Consultorio',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          meta: { 
+            requiresAuth: true
+          },
+          children: [
+            {
+              path: 'crear',
+              name: 'Crear',
+              component: CrearConsultorio
+            },
+            {
+              path: 'misconsultorios',
+              name: 'MisConsultorios',
+              component: MisConsultorios
+            }
+          ]
         }
       ]
     },
