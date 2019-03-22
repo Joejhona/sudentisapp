@@ -30,7 +30,7 @@ export const GET_ME = gql`
 `;
 
 export const CREATE_CLINIC = gql`
-  mutation CreateClinic($idruc: Int!, $name: String!, $zonework: String!){
+  mutation CreateClinic($idruc: String!, $name: String!, $zonework: String!){
     createClinic(idruc: $idruc, name: $name, zonework: $zonework) {
       idruc
       name
@@ -39,6 +39,28 @@ export const CREATE_CLINIC = gql`
     }
   }
 `;
+
+export const GET_ME_CLINICS = gql`
+  query{
+    meclinic{
+      condicion
+      idruc
+      name
+      estado
+      positionSet{
+        job
+        dentist{
+          nombre
+          dentistuser{
+            username
+          }
+        }
+      }
+    }
+  }
+`;
+
+
 
 /*
 export const GET_USER = gql`

@@ -14,7 +14,13 @@ import { apitoken } from '@/services/api'
 
 
 Vue.use(BootstrapVue)
-Vue.use(VeeValidate,{fieldsBagName: 'formFields'})
+Vue.use(VeeValidate,{
+  inject: true,
+  // Important to name this something other than 'fields'
+  fieldsBagName: 'veeFields'}
+  
+  //fieldsBagName: 'formFields'}
+)
 
 //Vue.prototype.$http = Axios;
 

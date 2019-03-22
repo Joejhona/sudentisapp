@@ -6,36 +6,41 @@
           <div slot="header">
             <strong>Crear Clinica </strong><small>Form</small>
           </div>
-          <b-form @submit="addClinic">
+          <b-form>
             <b-form-group>
               <label for="company">Nombre</label>
-              <b-form-input v-model="nombre" type="text" id="company" placeholder="Enter your company name" name="nombre"></b-form-input>
-            </b-form-group>
-            <!--
-            <b-form-group label-for="rucImput">
-              <label for="rucImput">Ruc</label>
               <b-form-input 
-                  id="rucImput"
-                  type="number"
-                  v-model="ruc"
-                  v-validate="'required|numeric|digits:11'" 
-                  :state="validateState('ruc')"
-                  aria-describedby="input1LiveFeedback"
-                  placeholder="Ingresa un Ruc"></b-form-input>
-              <b-form-invalid-feedback id="input1LiveFeedback">
-                  This is a required field and must be at least 3 characters
-              </b-form-invalid-feedback>
+                v-validate="'required|max:50'" 
+                name="nombre"
+                v-model="nombre" 
+                type="text" 
+                id="company" 
+                placeholder="Enter your company name"
+              ></b-form-input>
             </b-form-group>
-            -->
             <b-form-group>
               <label for="street">Ruc</label>
-              <b-form-input v-model="ruc" type="number" id="street" placeholder="Enter street name" name="ruc"></b-form-input>
+              <b-form-input 
+                v-validate="'required|digits:11'" 
+                name="ruc"
+                v-model="ruc" 
+                type="number" 
+                id="street" 
+                placeholder="Enter street name"
+              ></b-form-input>
             </b-form-group>
             <b-row>
               <b-col sm="8">
                 <b-form-group>
                   <label for="city">Zona de Trabajo</label>
-                  <b-form-input v-model="zonadetrabajo" type="text" id="city" placeholder="Enter your city" name="zonadetrabajo"></b-form-input>
+                  <b-form-input 
+                    v-validate="'required|max:50'" 
+                    name="zonadetrabajo"
+                    v-model="zonadetrabajo" 
+                    type="text" 
+                    id="city" 
+                    placeholder="Enter your city"
+                  ></b-form-input>
                 </b-form-group>
               </b-col>
               <b-col sm="4">
@@ -45,8 +50,8 @@
                 </b-form-group>
               </b-col>
             </b-row>
-            <div slot="footer">
-                <b-button type="submit" size="sm" variant="primary"><i class="fa fa-dot-circle-o"></i> Crear Clinica</b-button>
+            <div slot="footer" v-if="nombre && ruc && zonadetrabajo">
+                <b-button @click="addClinic" size="sm" variant="primary" :disabled="errors.any()"><i class="fa fa-dot-circle-o"></i> Crear Clinica</b-button>
             </div>
             <!--
             <b-form-group>
@@ -56,6 +61,7 @@
             -->
           </b-form>
           <hr>
+          <b-alert v-bind:key="error.id" v-for="error in errors.all()" show variant="danger">{{ error }}</b-alert>
         </b-card>
       </b-col>
       <b-col sm="6">
@@ -112,10 +118,6 @@ export default {
   name: 'control',
   data() {
     return {
-      estado: "En el local store se gurdan cosas, para recuperar",
-      form: {
-          ruc:10434638254,
-      },
       ruc: '',
       nombre: '',
       zonadetrabajo: '',
@@ -125,21 +127,8 @@ export default {
   methods:{
     async addClinic(){
         var clinic = await createClinic({idruc:this.ruc,name:this.nombre,zonework:this.zonadetrabajo})
-        //console.log(clinic)
         this.clinicnew = clinic.data.data.createClinic
     },
-    
-    //async getToken(){
-    //    var tokenAuth = await getTokenUP({username:this.userlogin,password:this.password})
-    //    this.token = tokenAuth.data.data.tokenAuth.token
-    //},
-
-    //validateState(ref) {
-    //    if (this.veeFields[ref] && (this.veeFields[ref].dirty || this.veeFields[ref].validated)) {
-    //      return !this.errors.has(ref)
-    //    }
-    //    return null
-    //}
   }
 }
 </script>
