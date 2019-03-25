@@ -6,9 +6,9 @@ import { GET_ME_CLINICS,GET_CLINICS,CREATE_CLINIC,GET_TOKEN,GET_ME } from '@/ser
 //instance.defaults.xsrfHeaderName = "X-CSRFToken";
 
 const apitoken = axios.create({
-    baseURL: "http://127.0.0.1:8000/gql",
+    //baseURL: "http://127.0.0.1:8000/gql",
     //baseURL: "http://joejhona.pythonanywhere.com/gql",
-    //baseURL: "https://joejhona.pythonanywhere.com/gql",
+    baseURL: "https://joejhona.pythonanywhere.com/gql",
     //timeout: 5000,
 })
 
