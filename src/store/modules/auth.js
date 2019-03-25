@@ -1,8 +1,8 @@
 /* eslint-disable promise/param-names */
 import { AUTH_REQUEST, AUTH_ERROR, AUTH_SUCCESS, AUTH_LOGOUT } from '../actions/auth'
 import { USER_REQUEST } from '../actions/user'
-import {getTokenUP} from '@/services/GraphqlService'
-import {apitoken} from '@/services/api'
+import { getTokenUP } from '@/services/GraphqlService'
+import { apitoken } from '@/services/api'
 //import Router from '@/router'
 
 const state = { token: localStorage.getItem('user-token') || '', status: '', hasLoadedOnce: false }

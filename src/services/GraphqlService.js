@@ -1,38 +1,17 @@
 import axios from 'axios'
 import { print } from 'graphql'
-import { GET_USERS,GET_CLINICS,CREATE_CLINIC,GET_TOKEN,GET_ME } from '@/services/queries'
+import { GET_ME_CLINICS,GET_CLINICS,CREATE_CLINIC,GET_TOKEN,GET_ME } from '@/services/queries'
 //import { apitoken, instance } from '../services/api'
 //import jQuery from 'jquery'
 //instance.defaults.xsrfHeaderName = "X-CSRFToken";
 
 const apitoken = axios.create({
-    //baseURL: "http://127.0.0.1:8000/gql",
+    baseURL: "http://127.0.0.1:8000/gql",
     //baseURL: "http://joejhona.pythonanywhere.com/gql",
-    baseURL: "https://joejhona.pythonanywhere.com/gql",
+    //baseURL: "https://joejhona.pythonanywhere.com/gql",
     //timeout: 5000,
 })
-/*
-function getUsers () {
-    return apitoken.post('',{
-        query: print(GET_USERS)
-        })
-    }
 
-function getClinics () {
-    return apitoken.post('',{
-        query: print(GET_CLINICS)
-        })
-    }
-
-function getUser (params) {
-    return apitoken.post('',{
-        query: print(GET_USER),
-        variables:{
-            username : params.username
-        }
-    })
-}
-*/
 function getTokenUP (params) {
     return apitoken.post('',{
         query: print(GET_TOKEN),
@@ -49,6 +28,14 @@ function getMe () {
         query: print(GET_ME)
     })
 }
+
+/*
+function getMeClinics () {
+    return apitoken.post('',{
+        query: print(GET_ME_CLINICS)
+    })
+}
+*/
 
 function createClinic (params) {
     return apitoken.post('',{
@@ -108,4 +95,27 @@ function getCookie(name) {
 }
 
 var csrftoken = getCookie('csrftoken');
+*/
+
+/*
+function getUsers () {
+    return apitoken.post('',{
+        query: print(GET_USERS)
+        })
+    }
+
+function getClinics () {
+    return apitoken.post('',{
+        query: print(GET_CLINICS)
+        })
+    }
+
+function getUser (params) {
+    return apitoken.post('',{
+        query: print(GET_USER),
+        variables:{
+            username : params.username
+        }
+    })
+}
 */

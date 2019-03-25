@@ -4,7 +4,7 @@ import Vue from 'vue'
 import { AUTH_LOGOUT } from '../actions/auth'
 import { getMe } from '@/services/GraphqlService'
 
-const state = { status: '', profile: {} }
+const state = { status: '', profile: {}, clinics: {}, jobs: {} }
 
 const getters = {
   getProfile: state => state.profile,
@@ -18,7 +18,7 @@ const actions = {
     //console.log(name)
     //apiCall({url: 'user/me'})
       .then(resp => {
-        let user = resp.data.data.me
+        let user = resp.data.data
         console.log(user)
         commit(USER_SUCCESS, user)
       })
@@ -35,14 +35,18 @@ const mutations = {
     state.status = 'loading'
   },
   [USER_SUCCESS]: (state, resp) => {
-    state.status = 'success'
-    Vue.set(state, 'profile', resp)
+    state.status  = 'success'
+    Vue.set(state, 'profile', resp.me)
+    state.clinics = resp.meclinic
+    state.jobs    = resp.mejob
   },
   [USER_ERROR]: (state) => {
     state.status = 'error'
   },
   [AUTH_LOGOUT]: (state) => {
     state.profile = {}
+    state.clinics = {}
+    state.jobs    = {}
   }
 }
 

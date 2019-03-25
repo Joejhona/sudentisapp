@@ -5,4 +5,5 @@ const apitoken = axios.create({
     timeout: 1000,
 })
 
-export {instance,apitoken}
+//export {instance,apitoken}
+export {apitoken}

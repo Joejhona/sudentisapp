@@ -11,7 +11,7 @@ export default {
       icon: 'icon-puzzle',
       children: [
         {
-          name: 'Crear Consultorio',
+          name: 'Crear o Postular',
           url: '/sudentis3/consultorio/crear',
           icon: 'icon-puzzle'
         },
@@ -24,17 +24,17 @@ export default {
     },
     {
       name: 'Historias',
-      url: '/sudentis3/historias',
+      url: '/sudentis3/historia',
       icon: 'icon-cursor',
       children: [
         {
           name: 'Crear Historia',
-          url: '/sudentis3/historias/crear',
+          url: '/sudentis3/historia/crear',
           icon: 'icon-cursor'
         },
         {
           name: 'Mis Historias',
-          url: '/sudentis3/historias/mishistorias',
+          url: '/sudentis3/historia/mishistorias',
           icon: 'icon-cursor'
         }
       ]

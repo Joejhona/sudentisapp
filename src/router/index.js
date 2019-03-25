@@ -12,6 +12,10 @@ const Control = () => import('@/views/Control')
 const CrearConsultorio = () => import('@/views/consultorio/Crear')
 const MisConsultorios = () => import('@/views/consultorio/MisConsultorios')
 
+// Vistas - Historia
+const CrearHistoria = () => import('@/views/historia/Crear')
+const MisHistorias = () => import('@/views/historia/MisHistorias')
+
 // IndexJoe
 const IndexJoe = () => import('@/views/IndexJoe')
 
@@ -104,13 +108,36 @@ let router = new Router({
           children: [
             {
               path: 'crear',
-              name: 'Crear',
+              name: 'Crear o Postular',
               component: CrearConsultorio
             },
             {
               path: 'misconsultorios',
-              name: 'MisConsultorios',
+              name: 'Mis Consultorios',
               component: MisConsultorios
+            }
+          ]
+        },
+        {
+          path: 'historia',
+          redirect: '/sudentis3/historia/crear',
+          name: 'Historia',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          meta: {
+            requiresAuth: true
+          },
+          children: [
+            {
+              path: 'crear',
+              name: 'Crear Historia',
+              component: CrearHistoria
+            },
+            {
+              path: 'mishistorias',
+              name: 'Mis Historias',
+              component: MisHistorias
             }
           ]
         }

@@ -28,7 +28,7 @@ import { Callout } from '@coreui/vue'
 import { mapState } from 'vuex'
 
 export default {
-  name: 'MisConsultorios',
+  name: 'MisHistorias',
   data() {
     return {
     }
