@@ -72,7 +72,8 @@ export default {
     //  return columns
     //},
     ...mapState({
-      meclinic: state => state.user.clinics
+      //meclinic: state => state.user.clinics
+      meclinic: state => state.work.clinics
     })
   }
 }

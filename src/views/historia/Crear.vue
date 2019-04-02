@@ -1,54 +1,34 @@
 <template>
   <div class="animated fadeIn">
     <b-row>
-      <b-col sm="6">
+      <b-col sm="12">
         <b-card>
           <div slot="header">
-            <strong>Crear Clinica </strong><small>Formulario</small>
+            <strong>Buscar paciente</strong>
           </div>
           <b-form-group>
-            <b-alert show variant="danger">
-                <strong>Buscar en Sunat</strong> solo funciona para versiones pagadas adquierela 
-                <a href="#" class="alert-link">aqui</a> solo por S/.30 mes.
-            </b-alert>
             <b-input-group>
               <!-- Attach Left button -->
               <b-input-group-prepend>
                 <b-button variant="primary">
-                  <i class="fa fa-search"></i> Buscar en Sunat
+                  <i class="fa fa-search"></i> Buscar
                 </b-button>
               </b-input-group-prepend>
-              <b-form-input type="text" placeholder="Ingresa el Ruc"></b-form-input>
+              <b-form-input type="text" placeholder="Ingresa DNI, Nombre o Apellido"></b-form-input>
             </b-input-group>
           </b-form-group>
-          <hr>
+        </b-card>
+      </b-col>
+      <b-col sm="12">
+        <b-card>
+          <div slot="header">
+            <strong>Crear Historia </strong><small>Formulario</small>
+          </div>
           <b-form>
-            <b-form-group>
-              <label for="company">Nombre</label>
-              <b-form-input 
-                v-validate="'required|max:50'" 
-                name="nombre"
-                v-model="nombre" 
-                type="text" 
-                id="company" 
-                placeholder="Nombre de tu consultorio"
-              ></b-form-input>
-            </b-form-group>
-            <b-form-group>
-              <label for="street">Ruc</label>
-              <b-form-input 
-                v-validate="'required|digits:11'" 
-                name="ruc"
-                v-model="ruc" 
-                type="number" 
-                id="street" 
-                placeholder="Ruc de 11 digitos"
-              ></b-form-input>
-            </b-form-group>
             <b-row>
-              <b-col sm="8">
+              <b-col sm="4">
                 <b-form-group>
-                  <label for="city">Zona de Trabajo</label>
+                  <label for="city">Nombre(s)</label>
                   <b-form-input 
                     v-validate="'required|max:50'" 
                     name="zonadetrabajo"
@@ -61,14 +41,162 @@
               </b-col>
               <b-col sm="4">
                 <b-form-group>
-                  <label for="postal-code">Telefono</label>
+                  <label for="city">Primer Apellido</label>
+                  <b-form-input 
+                    v-validate="'required|max:50'" 
+                    name="zonadetrabajo"
+                    v-model="zonadetrabajo" 
+                    type="text" 
+                    id="city" 
+                    placeholder="Ciudad, distrito y barrio"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col sm="4">
+                <b-form-group>
+                  <label for="postal-code">Segundo Apellido</label>
                   <b-form-input type="text" id="postal-code" placeholder="Telefono"></b-form-input>
                 </b-form-group>
               </b-col>
             </b-row>
-            <div slot="footer" v-if="nombre && ruc && zonadetrabajo">
-                <b-button @click="addClinic" size="sm" variant="primary" :disabled="errors.any()"><i class="fa fa-dot-circle-o"></i> Crear Clinica</b-button>
-            </div>
+            <b-row>
+              <b-col sm="4">
+                <b-form-group>
+                  <label for="city">DNI</label>
+                  <b-form-input 
+                    v-validate="'required|max:50'" 
+                    name="zonadetrabajo"
+                    v-model="zonadetrabajo" 
+                    type="text" 
+                    id="city" 
+                    placeholder="DNI"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col sm="4">
+                <b-form-group>
+                  <label for="city">Celular</label>
+                  <b-form-input 
+                    v-validate="'required|max:50'" 
+                    name="zonadetrabajo"
+                    v-model="zonadetrabajo" 
+                    type="text" 
+                    id="city" 
+                    placeholder="Celular"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col sm="4">
+                <b-form-group>
+                  <label for="postal-code">E-mail</label>
+                  <b-form-input type="text" id="postal-code" placeholder="e-mail"></b-form-input>
+                </b-form-group>
+              </b-col>
+            </b-row>
+            <hr>
+            <b-row>
+              <b-col sm="4">
+                <b-form-group
+                  label="Sexo"
+                  label-for="basicRadios"
+                  :label-cols="3"
+                  :horizontal="true">
+                  <b-form-radio-group id="basicRadios"
+                    :plain="true"
+                    value="1"
+                    :options="[
+                      {text: 'Masculino ',value: '1'},
+                      {text: 'Femenino ',value: '2'},
+                    ]"
+                    checked="3"
+                    stacked>
+                  </b-form-radio-group>
+                </b-form-group>
+              </b-col>
+              <b-col sm="4">
+                <b-form-group>
+                  <label for="postal-code">Fecha de Nacimiento</label>
+                  <b-form-input type="date" id="date"></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col sm="4">
+                <b-form-group>
+                  <label for="postal-code">Alergias</label>
+                  <b-form-input type="text"></b-form-input>
+                </b-form-group>
+              </b-col>
+            </b-row>
+            <hr>
+            <b-button-group>
+              <b-button @click="addClinic" v-if="nombre" variant="primary" :disabled="errors.any()"><i class="fa fa-dot-circle-o"></i> Crear Clinica</b-button>
+              <b-btn v-b-toggle.collapse1 variant="success"><i class="fa fa-plus"></i> Mas Datos</b-btn>
+            </b-button-group>
+            <hr>
+            <b-collapse id="collapse1" class="mt-2">
+              <b-row>
+                <b-col sm="4">
+                  <b-form-group>
+                    <label for="street">Lugar de Nacimiento</label>
+                    <b-form-input 
+                      v-validate="'required|digits:11'" 
+                      name="ruc"
+                      v-model="ruc" 
+                      type="number" 
+                      id="street" 
+                      placeholder="Lugar de Nacimiento"
+                    ></b-form-input>
+                  </b-form-group>
+                </b-col>
+                <b-col sm="4">
+                  <b-form-group>
+                    <label for="street">Dirección Actual</label>
+                    <b-form-input 
+                      v-validate="'required|digits:11'" 
+                      name="ruc"
+                      v-model="ruc" 
+                      type="number" 
+                      id="street" 
+                      placeholder="Dirección referencial"
+                    ></b-form-input>
+                  </b-form-group>
+                </b-col>
+                <b-col sm="4">
+                  <b-form-group>
+                    <label for="street">Ocupación</label>
+                    <b-form-input 
+                      v-validate="'required|digits:11'" 
+                      name="ruc"
+                      v-model="ruc" 
+                      type="number" 
+                      id="street" 
+                      placeholder="Ocupación"
+                    ></b-form-input>
+                  </b-form-group>
+                </b-col>
+              </b-row>
+              <b-form-group>
+                <label for="street">Antecedentes Personales</label>
+                <b-form-input 
+                  v-validate="'required|digits:11'" 
+                  name="ruc"
+                  v-model="ruc" 
+                  type="text" 
+                  id="street" 
+                  placeholder="Indicar los antecedentes personales"
+                ></b-form-input>
+              </b-form-group>
+              <b-form-group>
+                <label for="street">Antecedentes Familiares</label>
+                <b-form-input 
+                  v-validate="'required|digits:11'" 
+                  name="ruc"
+                  v-model="ruc" 
+                  type="text" 
+                  id="street" 
+                  placeholder="Indicar los antecedentes familiares"
+                ></b-form-input>
+              </b-form-group>
+            </b-collapse>
             <!--
             <b-form-group>
               <label for="country">Country</label>
@@ -78,24 +206,6 @@
           </b-form>
           <hr>
           <b-alert v-bind:key="error.id" v-for="error in errors.all()" show variant="danger">{{ error }}</b-alert>
-        </b-card>
-      </b-col>
-      <b-col sm="6">
-        <b-card>
-          <div slot="header">
-            <strong>Postular a un consultorio</strong>
-          </div>
-          <b-form-group>
-            <b-input-group>
-              <!-- Attach Left button -->
-              <b-input-group-prepend>
-                <b-button variant="primary">
-                  <i class="fa fa-search"></i> Buscar
-                </b-button>
-              </b-input-group-prepend>
-              <b-form-input type="text" placeholder="Ingresa Ruc o Nombre"></b-form-input>
-            </b-input-group>
-          </b-form-group>
         </b-card>
       </b-col>
       <b-modal title="Felicitaciones ¡Clinica Creada!" v-model="clinicadd" class="modal-primary">
