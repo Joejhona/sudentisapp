@@ -139,6 +139,7 @@
 <script>
 import { Callout } from '@coreui/vue'
 import { createClinic } from '@/services/GraphqlService'
+import { ME_CLINICS_REQUEST } from '@/store/actions/work'
 //import { mapGetters, mapState } from 'vuex'
 
 export default {
@@ -154,9 +155,19 @@ export default {
   },
   methods:{
     async addClinic(){
-      var clinic = await createClinic({idruc:this.ruc,name:this.nombre,zonework:this.zonadetrabajo})
-      this.clinicnew = clinic.data.data.createClinic
-      this.clinicadd = clinic
+      await createClinic({idruc:this.ruc,name:this.nombre,zonework:this.zonadetrabajo})
+        .then(resp => {
+          //var clinic =
+          this.clinicnew = resp.data.data.createClinic
+          this.clinicadd = resp
+          this.$store.dispatch(ME_CLINICS_REQUEST)
+          //this.$router.push('/sudentis3/consultorio/misconsultorios')
+        })
+        .catch(resp => {
+          this.clinicadd = false
+        })
+      //this.clinicnew = clinic.data.data.createClinic
+      //this.clinicadd = clinic
       //if (this.clinic) {
       //  this.clinicadd = true
       //}

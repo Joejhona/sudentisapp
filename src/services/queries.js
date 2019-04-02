@@ -26,24 +26,6 @@ export const GET_ME = gql`
         email
       }
     }
-    meclinic{
-      condicion
-      idruc
-      name
-      estado
-      positionSet{
-        job
-        dentist{
-          idDentist
-          nombre
-          estado
-          zonework
-          dentistuser{
-            email
-          }
-        }
-      }
-    }
     mejob{
       job
       clinic{
@@ -65,11 +47,28 @@ export const CREATE_CLINIC = gql`
   }
 `;
 
-//export const GET_ME_CLINICS = gql`
-//  query{
-//    
-//  }
-//`;
+export const GET_ME_CLINICS = gql`
+  query{
+    meclinic{
+      condicion
+      idruc
+      name
+      estado
+      positionSet{
+        job
+        dentist{
+          idDentist
+          nombre
+          estado
+          zonework
+          dentistuser{
+            email
+          }
+        }
+      }
+    }
+  }
+`;
 
 /*
 export const GET_ME_CLINICS = gql`

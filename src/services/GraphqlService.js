@@ -29,13 +29,11 @@ function getMe () {
     })
 }
 
-/*
 function getMeClinics () {
     return apitoken.post('',{
         query: print(GET_ME_CLINICS)
     })
 }
-*/
 
 function createClinic (params) {
     return apitoken.post('',{
@@ -48,7 +46,7 @@ function createClinic (params) {
     })
 }
 
-export {createClinic,getTokenUP,getMe}
+export {createClinic,getTokenUP,getMe,getMeClinics}
 
 /*
 export default {

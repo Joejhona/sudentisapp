@@ -1,10 +1,11 @@
 import { USER_REQUEST, USER_ERROR, USER_SUCCESS } from '../actions/user'
+import { ME_CLINICS_REQUEST } from '../actions/work'
 //import apiCall from 'utils/api'
 import Vue from 'vue'
 import { AUTH_LOGOUT } from '../actions/auth'
 import { getMe } from '@/services/GraphqlService'
 
-const state = { status: '', profile: {}, clinics: {}, jobs: {} }
+const state = { status: '', profile: {}, jobs: {} }
 
 const getters = {
   getProfile: state => state.profile,
@@ -21,6 +22,7 @@ const actions = {
         let user = resp.data.data
         console.log(user)
         commit(USER_SUCCESS, user)
+        dispatch(ME_CLINICS_REQUEST)
       })
       .catch(resp => {
         commit(USER_ERROR)
@@ -37,7 +39,6 @@ const mutations = {
   [USER_SUCCESS]: (state, resp) => {
     state.status  = 'success'
     Vue.set(state, 'profile', resp.me)
-    state.clinics = resp.meclinic
     state.jobs    = resp.mejob
   },
   [USER_ERROR]: (state) => {
@@ -45,7 +46,6 @@ const mutations = {
   },
   [AUTH_LOGOUT]: (state) => {
     state.profile = {}
-    state.clinics = {}
     state.jobs    = {}
   }
 }
