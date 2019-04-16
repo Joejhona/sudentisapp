@@ -1,6 +1,6 @@
 <template>
   <div class="animated fadeIn">
-    <h1>Bienbenido</h1>
+    <h1>Bienvenido</h1>
     <h2>{{name}}</h2>
     <h2>{{estado}}</h2>
     <h2>{{me.nombre}}</h2>
