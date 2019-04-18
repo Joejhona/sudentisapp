@@ -78,7 +78,7 @@ export default {
       ]
     },
     {
-      name: 'Material dendal',
+      name: 'Material Dental',
       url: '/sudentis3/materiales',
       icon: 'icon-calculator',
       badge: {
