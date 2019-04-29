@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '@/store'
 
+//--------------------- SUDENTIS ---------------------//
 // Containers
 const SudentisContainer = () => import('@/containers/SudentisContainer')
 
@@ -15,6 +16,10 @@ const MisConsultorios = () => import('@/views/consultorio/MisConsultorios')
 // Vistas - Historia
 const CrearHistoria = () => import('@/views/historia/Crear')
 const MisHistorias = () => import('@/views/historia/MisHistorias')
+
+//--------------------- SUDENTIS - PRUEBA ---------------------//
+// Containers
+const SudentisContainerPrueba = () => import('@/containers/SudentisContainerPrueba')
 
 // IndexJoe
 const IndexJoe = () => import('@/views/IndexJoe')
@@ -82,8 +87,8 @@ let router = new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
-      path: '/sudentis3',
-      redirect: '/sudentis3/control',
+      path: '/',
+      redirect: '/control',
       name: 'Home',
       component: SudentisContainer,
       children:[
@@ -97,7 +102,7 @@ let router = new Router({
         },
         {
           path: 'consultorio',
-          redirect: '/sudentis3/consultorio/crear',
+          redirect: '/consultorio/crear',
           name: 'Consultorio',
           component: {
             render (c) { return c('router-view') }
@@ -120,7 +125,7 @@ let router = new Router({
         },
         {
           path: 'historia',
-          redirect: '/sudentis3/historia/crear',
+          redirect: '/historia/crear',
           name: 'Historia',
           component: {
             render (c) { return c('router-view') }
@@ -144,8 +149,61 @@ let router = new Router({
       ]
     },
     {
-      path: '/',
-      redirect: '/dashboard',
+      path: '/prueba',
+      redirect: '/prueba/control',
+      name: 'Home',
+      component: SudentisContainerPrueba,
+      children:[
+        {
+          path: 'control',
+          name: 'Control',
+          component: Control,
+        },
+        {
+          path: 'consultorio',
+          redirect: '/prueba/consultorio/crear',
+          name: 'Consultorio',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'crear',
+              name: 'Crear o Postular',
+              component: CrearConsultorio
+            },
+            {
+              path: 'misconsultorios',
+              name: 'Mis Consultorios',
+              component: MisConsultorios
+            }
+          ]
+        },
+        {
+          path: 'historia',
+          redirect: '/prueba/historia/crear',
+          name: 'Historia',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'crear',
+              name: 'Crear Historia',
+              component: CrearHistoria
+            },
+            {
+              path: 'mishistorias',
+              name: 'Mis Historias',
+              component: MisHistorias
+            }
+          ]
+        }
+      ]
+    },
+    {
+      path: '/plantilla',
+      redirect: '/plantilla/dashboard',
       name: 'Home',
       component: DefaultContainer,
       children: [
@@ -165,7 +223,7 @@ let router = new Router({
         },
         {
           path: 'theme',
-          redirect: '/theme/colors',
+          redirect: '/plantilla/theme/colors',
           name: 'Theme',
           component: {
             render (c) { return c('router-view') }
@@ -214,7 +272,7 @@ let router = new Router({
         },
         {
           path: 'base',
-          redirect: '/base/cards',
+          redirect: '/plantilla/base/cards',
           name: 'Base',
           component: {
             render (c) { return c('router-view') }
@@ -304,7 +362,7 @@ let router = new Router({
         },
         {
           path: 'buttons',
-          redirect: '/buttons/standard-buttons',
+          redirect: '/plantilla/buttons/standard-buttons',
           name: 'Buttons',
           component: {
             render (c) { return c('router-view') }
@@ -334,7 +392,7 @@ let router = new Router({
         },
         {
           path: 'icons',
-          redirect: '/icons/font-awesome',
+          redirect: '/plantilla/icons/font-awesome',
           name: 'Icons',
           component: {
             render (c) { return c('router-view') }
@@ -364,7 +422,7 @@ let router = new Router({
         },
         {
           path: 'notifications',
-          redirect: '/notifications/alerts',
+          redirect: '/plantilla/notifications/alerts',
           name: 'Notifications',
           component: {
             render (c) { return c('router-view') }

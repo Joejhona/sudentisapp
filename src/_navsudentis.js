@@ -2,51 +2,51 @@ export default {
   items: [
     {
       name: 'Control',
-      url: '/sudentis3/control',
+      url: '/control',
       icon: 'icon-speedometer',
     },
     {
       name: 'Consultorio',
-      url: '/sudentis3/consultorio',
+      url: '/consultorio',
       icon: 'icon-puzzle',
       children: [
         {
           name: 'Crear o Postular',
-          url: '/sudentis3/consultorio/crear',
+          url: '/consultorio/crear',
           icon: 'icon-puzzle'
         },
         {
           name: 'Mis Consultorios',
-          url: '/sudentis3/consultorio/misconsultorios',
+          url: '/consultorio/misconsultorios',
           icon: 'icon-puzzle'
         },
       ]
     },
     {
       name: 'Historias',
-      url: '/sudentis3/historia',
+      url: '/historia',
       icon: 'icon-cursor',
       children: [
         {
           name: 'Crear Historia',
-          url: '/sudentis3/historia/crear',
+          url: '/historia/crear',
           icon: 'icon-cursor'
         },
         {
           name: 'Mis Historias',
-          url: '/sudentis3/historia/mishistorias',
+          url: '/historia/mishistorias',
           icon: 'icon-cursor'
         }
       ]
     },
     {
       name: 'Atenciones',
-      url: '/sudentis3/atenciones',
+      url: '/atenciones',
       icon: 'icon-star',
       children: [
         {
           name: 'Crear Atencion',
-          url: '/sudentis3/atenciones/crear',
+          url: '/atenciones/crear',
           icon: 'icon-star',
           badge: {
             variant: 'info',
@@ -55,31 +55,31 @@ export default {
         },
         {
           name: 'Mis Atenciones',
-          url: '/sudentis3/atenciones/misatenciones',
+          url: '/atenciones/misatenciones',
           icon: 'icon-star'
         },
       ]
     },
     {
       name: 'Citas',
-      url: '/sudentis3/citas',
+      url: '/citas',
       icon: 'icon-bell',
       children: [
         {
           name: 'Crear Cita',
-          url: '/sudentis3/citas/crear',
+          url: '/citas/crear',
           icon: 'icon-bell'
         },
         {
           name: 'Mis Citas',
-          url: '/sudentis3/citas/miscitas',
+          url: '/citas/miscitas',
           icon: 'icon-bell'
         },
       ]
     },
     {
       name: 'Material Dental',
-      url: '/sudentis3/materiales',
+      url: '/materiales',
       icon: 'icon-calculator',
       badge: {
         variant: 'danger',
@@ -88,12 +88,12 @@ export default {
       children:[
         {
           name: 'Consultorio',
-          url: '/sudentis3/materiales/consultorio',
+          url: '/materiales/consultorio',
           icon: 'icon-bell'
         },
         {
           name: 'Pacientes',
-          url: '/sudentis3/materiales/pacientes',
+          url: '/materiales/pacientes',
           icon: 'icon-bell'
         },
       ]
@@ -107,22 +107,22 @@ export default {
     },
     {
       name: 'Buscar fuera',
-      url: '/sudentis3/buscar',
+      url: '/buscar',
       icon: 'icon-star',
       children: [
         {
           name: 'Clinicas',
-          url: '/sudentis3/buscar/clinicas',
+          url: '/buscar/clinicas',
           icon: 'icon-star'
         },
         {
           name: 'Dentistas',
-          url: '/sudentis3/buscar/dentistas',
+          url: '/buscar/dentistas',
           icon: 'icon-star'
         },
         {
           name: 'Pacientes',
-          url: '/sudentis3/buscar/pacientes',
+          url: '/buscar/pacientes',
           icon: 'icon-star'
         },
       ]

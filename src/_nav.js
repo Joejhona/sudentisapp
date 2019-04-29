@@ -2,7 +2,7 @@ export default {
   items: [
     {
       name: 'Dashboard',
-      url: '/dashboard',
+      url: '/plantilla/dashboard',
       icon: 'icon-speedometer',
       badge: {
         variant: 'primary',
@@ -20,7 +20,7 @@ export default {
     },
     {
       name: 'Colors',
-      url: '/theme/colors',
+      url: '/plantilla/theme/colors',
       icon: 'icon-drop',
       badge: {
         variant: 'danger',
@@ -29,7 +29,7 @@ export default {
     },
     {
       name: 'Typography',
-      url: '/theme/typography',
+      url: '/plantilla/theme/typography',
       icon: 'icon-pencil',
       badge: {
         variant: 'danger',
@@ -47,121 +47,121 @@ export default {
     },
     {
       name: 'Base',
-      url: '/base',
+      url: '/plantilla/base',
       icon: 'icon-puzzle',
       children: [
         {
           name: 'Breadcrumbs',
-          url: '/base/breadcrumbs',
+          url: '/plantilla/base/breadcrumbs',
           icon: 'icon-puzzle'
         },
         {
           name: 'Cards',
-          url: '/base/cards',
+          url: '/plantilla/base/cards',
           icon: 'icon-puzzle'
         },
         {
           name: 'Carousels',
-          url: '/base/carousels',
+          url: '/plantilla/base/carousels',
           icon: 'icon-puzzle'
         },
         {
           name: 'Collapses',
-          url: '/base/collapses',
+          url: '/plantilla/base/collapses',
           icon: 'icon-puzzle'
         },
         {
           name: 'Forms',
-          url: '/base/forms',
+          url: '/plantilla/base/forms',
           icon: 'icon-puzzle'
         },
         {
           name: 'Jumbotrons',
-          url: '/base/jumbotrons',
+          url: '/plantilla/base/jumbotrons',
           icon: 'icon-puzzle'
         },
         {
           name: 'List Groups',
-          url: '/base/list-groups',
+          url: '/plantilla/base/list-groups',
           icon: 'icon-puzzle'
         },
         {
           name: 'Navs',
-          url: '/base/navs',
+          url: '/plantilla/base/navs',
           icon: 'icon-puzzle'
         },
         {
           name: 'Navbars',
-          url: '/base/navbars',
+          url: '/plantilla/base/navbars',
           icon: 'icon-puzzle'
         },
         {
           name: 'Paginations',
-          url: '/base/paginations',
+          url: '/plantilla/base/paginations',
           icon: 'icon-puzzle'
         },
         {
           name: 'Popovers',
-          url: '/base/popovers',
+          url: '/plantilla/base/popovers',
           icon: 'icon-puzzle'
         },
         {
           name: 'Progress Bars',
-          url: '/base/progress-bars',
+          url: '/plantilla/base/progress-bars',
           icon: 'icon-puzzle'
         },
         {
           name: 'Switches',
-          url: '/base/switches',
+          url: '/plantilla/base/switches',
           icon: 'icon-puzzle'
         },
         {
           name: 'Tables',
-          url: '/base/tables',
+          url: '/plantilla/base/tables',
           icon: 'icon-puzzle'
         },
         {
           name: 'Tabs',
-          url: '/base/tabs',
+          url: '/plantilla/base/tabs',
           icon: 'icon-puzzle'
         },
         {
           name: 'Tooltips',
-          url: '/base/tooltips',
+          url: '/plantilla/base/tooltips',
           icon: 'icon-puzzle'
         }
       ]
     },
     {
       name: 'Buttons',
-      url: '/buttons',
+      url: '/plantilla/buttons',
       icon: 'icon-cursor',
       children: [
         {
           name: 'Buttons',
-          url: '/buttons/standard-buttons',
+          url: '/plantilla/buttons/standard-buttons',
           icon: 'icon-cursor'
         },
         {
           name: 'Button Dropdowns',
-          url: '/buttons/dropdowns',
+          url: '/plantilla/buttons/dropdowns',
           icon: 'icon-cursor'
         },
         {
           name: 'Button Groups',
-          url: '/buttons/button-groups',
+          url: '/plantilla/buttons/button-groups',
           icon: 'icon-cursor'
         },
         {
           name: 'Brand Buttons',
-          url: '/buttons/brand-buttons',
+          url: '/plantilla/buttons/brand-buttons',
           icon: 'icon-cursor'
         }
       ]
     },
     {
       name: 'Charts',
-      url: '/charts',
+      url: '/plantilla/charts',
       icon: 'icon-pie-chart',
       badge: {
         variant: 'danger',
@@ -175,7 +175,7 @@ export default {
       children: [
         {
           name: 'CoreUI Icons',
-          url: '/icons/coreui-icons',
+          url: '/plantilla/icons/coreui-icons',
           icon: 'icon-star',
           badge: {
             variant: 'info',
@@ -184,12 +184,12 @@ export default {
         },
         {
           name: 'Flags',
-          url: '/icons/flags',
+          url: '/plantilla/icons/flags',
           icon: 'icon-star'
         },
         {
           name: 'Font Awesome',
-          url: '/icons/font-awesome',
+          url: '/plantilla/icons/font-awesome',
           icon: 'icon-star',
           badge: {
             variant: 'secondary',
@@ -198,36 +198,36 @@ export default {
         },
         {
           name: 'Simple Line Icons',
-          url: '/icons/simple-line-icons',
+          url: '/plantilla/icons/simple-line-icons',
           icon: 'icon-star'
         }
       ]
     },
     {
       name: 'Notifications',
-      url: '/notifications',
+      url: '/plantilla/notifications',
       icon: 'icon-bell',
       children: [
         {
           name: 'Alerts',
-          url: '/notifications/alerts',
+          url: '/plantilla/notifications/alerts',
           icon: 'icon-bell'
         },
         {
           name: 'Badges',
-          url: '/notifications/badges',
+          url: '/plantilla/notifications/badges',
           icon: 'icon-bell'
         },
         {
           name: 'Modals',
-          url: '/notifications/modals',
+          url: '/plantilla/notifications/modals',
           icon: 'icon-bell'
         }
       ]
     },
     {
       name: 'Widgets',
-      url: '/widgets',
+      url: '/plantilla/widgets',
       icon: 'icon-calculator',
       badge: {
         variant: 'danger',
