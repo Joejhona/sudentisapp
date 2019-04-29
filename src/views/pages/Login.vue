@@ -65,7 +65,7 @@ export default {
       const { username, password } = this
       //this.$store.dispatch(AUTH_REQUEST, {username,password})
       this.$store.dispatch(AUTH_REQUEST, {username,password}).then(()=>{
-        this.$router.push('/sudentis3/control')
+        this.$router.push('/control')
       })
     }
   }

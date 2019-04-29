@@ -205,6 +205,7 @@
         </div>
       </b-col>
     </b-row>
+    
     <b-row>
       <b-col md="12">
         <b-card header="Traffic &amp; Sales">

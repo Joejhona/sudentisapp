@@ -20,6 +20,7 @@ const MisHistorias = () => import('@/views/historia/MisHistorias')
 //--------------------- SUDENTIS - PRUEBA ---------------------//
 // Containers
 const SudentisContainerPrueba = () => import('@/containers/SudentisContainerPrueba')
+const ControlPrueba = () => import('@/views/ControlPrueba')
 
 // IndexJoe
 const IndexJoe = () => import('@/views/IndexJoe')
@@ -157,7 +158,7 @@ let router = new Router({
         {
           path: 'control',
           name: 'Control',
-          component: Control,
+          component: ControlPrueba,
         },
         {
           path: 'consultorio',

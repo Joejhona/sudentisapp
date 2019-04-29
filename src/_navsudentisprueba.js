@@ -102,42 +102,6 @@ export default {
         divider: true
       },
       {
-        title: true,
-        name: 'Extras'
-      },
-      {
-        name: 'Buscar fuera',
-        url: '/prueba/buscar',
-        icon: 'icon-star',
-        children: [
-          {
-            name: 'Clinicas',
-            url: '/prueba/buscar/clinicas',
-            icon: 'icon-star'
-          },
-          {
-            name: 'Dentistas',
-            url: '/prueba/buscar/dentistas',
-            icon: 'icon-star'
-          },
-          {
-            name: 'Pacientes',
-            url: '/prueba/buscar/pacientes',
-            icon: 'icon-star'
-          },
-        ]
-      },
-      {
-        name: 'Pedir Material',
-        url: '/dashboard',
-        icon: 'icon-ban',
-        badge: {
-          variant: 'secondary',
-          text: 'NEW'
-        },
-        attributes: { disabled: true },
-      },
-      {
         name: 'Sudentis3 Windows',
         url: 'https://github.com/Joejhona',
         icon: 'icon-cloud-download',
@@ -154,4 +118,3 @@ export default {
       },
     ]
   }
-  

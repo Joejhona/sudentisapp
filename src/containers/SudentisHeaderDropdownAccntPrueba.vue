@@ -35,14 +35,13 @@
       </b-dropdown-item>
       <b-dropdown-divider />
       <b-dropdown-item><i class="fa fa-shield" /> Lock Account</b-dropdown-item>
-      <b-dropdown-item @click="logout"><i class="fa fa-lock" /> Cerrar Sesion</b-dropdown-item>
+      <b-dropdown-item><i class="fa fa-lock" /> Cerrar Sesion</b-dropdown-item>
     </template>
   </AppHeaderDropdown>
 </template>
 
 <script>
 import { HeaderDropdown as AppHeaderDropdown } from '@coreui/vue'
-import { AUTH_LOGOUT } from '@/store/actions/auth'
 
 export default {
   name: 'SudentisHeaderDropdownAccntPrueba',
@@ -52,10 +51,5 @@ export default {
   data: () => {
     return { itemsCount: 42 }
   },
-  methods:{
-      logout: function () {
-        this.$store.dispatch(AUTH_LOGOUT).then(() => this.$router.push('/pages/login'))
-      }
-  }
 }
 </script>

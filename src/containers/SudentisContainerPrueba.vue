@@ -15,7 +15,7 @@
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <!--<b-navbar-brand>Clinica los Matazanos</b-navbar-brand>      -->
-        <b-nav-item class="px-3" >{{me.nombre}}</b-nav-item> 
+        <b-nav-item class="px-3" >Dr. Joel Ticse</b-nav-item> 
         <b-nav-item class="d-md-down-none">
           <i class="icon-bell"></i>
           <b-badge pill variant="danger">5</b-badge>
@@ -100,11 +100,6 @@ export default {
     list () {
       return this.$route.matched.filter((route) => route.name || route.meta.label )
     },
-    ...mapGetters(['isAuthenticated']),
-    ...mapState({
-        //name: state => `${state.user.profile.nombre}`,
-        me: state => state.user.profile,
-      })
   },
 }
 </script>
